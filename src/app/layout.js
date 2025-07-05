@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "../components/Header";
 import { CartProvider } from "../components/CartContext";
 import Cart from "../components/Cart";
+import Link from "next/link";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,13 +19,13 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-2">
-            <img src="/images/logo (10).png" alt="Logo" width={32} height={32} className="object-contain" />
+            <Image src="/images/logo (10).png" alt="Logo" width={32} height={32} className="object-contain" />
             <span className="font-bold text-lg">AM Supply</span>
           </div>
           <nav className="flex space-x-6 text-sm">
-            <a href="/about" className="hover:text-primary transition-colors">About</a>
-            <a href="/contact" className="hover:text-primary transition-colors">Contact</a>
-            <a href="/" className="hover:text-primary transition-colors">Products</a>
+            <Link href="/about" className="hover:text-primary transition-colors">About</Link>
+            <Link href="/contact" className="hover:text-primary transition-colors">Contact</Link>
+            <Link href="/" className="hover:text-primary transition-colors">Products</Link>
           </nav>
           <div className="text-xs text-gray-400">&copy; {new Date().getFullYear()} AM Supply. All rights reserved.</div>
         </div>

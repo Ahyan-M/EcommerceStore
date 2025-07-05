@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import { getProductById, products } from '../../../data/products';
 import Link from 'next/link';
 import { CartContext } from '../../../components/CartContext';
+import Image from 'next/image';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -82,10 +83,11 @@ export default function ProductDetailPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
               {/* Product Image */}
               <div className="relative h-96 bg-background rounded-xl overflow-hidden flex items-center justify-center">
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
-                  className="object-contain h-full w-full"
+                  fill
+                  className="object-contain"
                   onError={(e) => { e.target.style.display = 'none'; }}
                 />
                 <div className="absolute top-4 right-4">
@@ -214,10 +216,11 @@ export default function ProductDetailPage() {
                 {relatedProducts.map((relatedProduct) => (
                   <div key={relatedProduct.id} className="bg-white rounded-xl border border-border-muted p-4 hover:shadow-md transition-shadow">
                     <div className="h-32 bg-background rounded-lg mb-3 flex items-center justify-center">
-                      <img
+                      <Image
                         src={relatedProduct.image}
                         alt={relatedProduct.name}
-                        className="object-contain h-full w-full"
+                        fill
+                        className="object-contain"
                         onError={(e) => { e.target.style.display = 'none'; }}
                       />
                     </div>

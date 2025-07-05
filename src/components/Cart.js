@@ -2,6 +2,7 @@
 
 import { useState, useContext } from 'react';
 import { CartContext } from './CartContext';
+import Image from 'next/image';
 
 export default function Cart() {
   const { isCartOpen, closeCart, cart, removeFromCart, updateQuantity, cartTotal, clearCart } = useContext(CartContext);
@@ -81,10 +82,12 @@ export default function Cart() {
                     {/* Product Image */}
                     <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden border border-border-muted">
                       {item.image ? (
-                        <img
+                        <Image
                           src={item.image}
                           alt={item.name}
-                          className="object-contain h-full w-full"
+                          width={64}
+                          height={64}
+                          className="object-contain"
                         />
                       ) : (
                         <svg className="w-8 h-8 text-text/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">

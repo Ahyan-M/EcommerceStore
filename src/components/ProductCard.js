@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ProductCard({ product, onAddToCart }) {
   return (
@@ -8,10 +9,11 @@ export default function ProductCard({ product, onAddToCart }) {
       {/* Product Image */}
       <Link href={`/product/${product.id}`}>
         <div className="relative h-48 bg-background overflow-hidden flex items-center justify-center">
-          <img
+          <Image
             src={product.image}
             alt={product.name}
-            className="object-contain h-full w-full transition-transform duration-200 group-hover:scale-105"
+            fill
+            className="object-contain transition-transform duration-200 group-hover:scale-105"
             onError={(e) => { e.target.style.display = 'none'; }}
           />
           <div className="absolute top-2 right-2">
