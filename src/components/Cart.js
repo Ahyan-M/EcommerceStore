@@ -28,12 +28,50 @@ export default function Cart() {
         }),
       });
 
-      const { url } = await response.json();
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Checkout failed');
+      }
+
+      const data = await response.json();
+      
+      if (!data.url) {
+        throw new Error('No checkout URL received');
+      }
+
       clearCart();
-      window.location.href = url;
+      window.location.href = data.url;
     } catch (error) {
       console.error('Error creating checkout session:', error);
-      alert('There was an error processing your checkout. Please try again.');
+      
+      // Provide more specific error messages
+      let errorMessage = 'There was an error processing your checkout. Please try again.';
+      
+      if (error.message.includes('Payment service not available')) {
+        errorMessage = 'Payment service is temporarily unavailable. Please try again later.';
+      } else if (error.message.includes('Payment service not configured')) {
+        errorMessage = 'Payment service is not properly configured. Please contact support.';
+      } else if (error.message.includes('No valid items provided')) {
+        errorMessage = 'Please add items to your cart before checkout.';
+      } else if (error.message.includes('Invalid item structure')) {
+        errorMessage = 'Some items in your cart are invalid. Please refresh and try again.';
+      } else if (error.message.includes('Invalid price or quantity')) {
+        errorMessage = 'Some items have invalid prices or quantities. Please refresh and try again.';
+      } else if (error.message.includes('Invalid total amount')) {
+        errorMessage = 'Invalid order total. Please refresh and try again.';
+      } else if (error.message.includes('Failed to create order')) {
+        errorMessage = 'Failed to create your order. Please try again.';
+      } else if (error.message.includes('Card error')) {
+        errorMessage = error.message;
+      } else if (error.message.includes('Invalid request')) {
+        errorMessage = 'Invalid checkout request. Please try again.';
+      } else if (error.message.includes('Payment service error')) {
+        errorMessage = 'Payment service error. Please try again.';
+      } else if (error.message.includes('No checkout URL received')) {
+        errorMessage = 'Failed to create checkout session. Please try again.';
+      }
+      
+      alert(errorMessage);
     } finally {
       setIsCheckingOut(false);
     }
