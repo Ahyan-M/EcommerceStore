@@ -1,0 +1,143 @@
+[
+  {
+    "id": "ORD-1750902801551",
+    "items": [
+      {
+        "id": 2,
+        "name": "Standing Desk",
+        "price": 599.99,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 599.99,
+    "createdAt": "2025-06-26T01:53:21.551Z",
+    "status": "pending",
+    "updatedAt": "2025-07-01T20:09:57.184Z"
+  },
+  {
+    "id": "ORD-1751401364662",
+    "items": [
+      {
+        "id": 4,
+        "name": "Fujitsu ScanSnap iX1600",
+        "price": 429,
+        "quantity": 1
+      },
+      {
+        "id": 3,
+        "name": "Logitech MK850 Performance Wireless Keyboard and Mouse Combo",
+        "price": 89,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 518,
+    "createdAt": "2025-07-01T20:22:44.662Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751403625047",
+    "items": [
+      {
+        "id": 4,
+        "name": "Fujitsu ScanSnap iX1600",
+        "price": 429,
+        "quantity": 1
+      },
+      {
+        "id": 3,
+        "name": "Logitech MK850 Performance Wireless Keyboard and Mouse Combo",
+        "price": 89,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 518,
+    "createdAt": "2025-07-01T21:00:25.047Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751681208858",
+    "items": [
+      {
+        "id": 6,
+        "name": "BenQ e-Reading LED Desk Lamp",
+        "price": 229,
+        "quantity": 1
+      },
+      {
+        "id": 3,
+        "name": "Logitech MK850 Performance Wireless Keyboard and Mouse Combo",
+        "price": 89,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 318,
+    "createdAt": "2025-07-05T02:06:48.858Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751683824401",
+    "items": [
+      {
+        "id": 1,
+        "name": "Herman Miller Aeron Ergonomic Chair",
+        "price": 1595,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 1595,
+    "createdAt": "2025-07-05T02:50:24.401Z",
+    "status": "paid",
+    "updatedAt": "2025-07-05T02:52:53.891Z"
+  },
+  {
+    "id": "ORD-1751684184863",
+    "items": [
+      {
+        "id": 2,
+        "name": "Fully Jarvis Bamboo Standing Desk",
+        "price": 599,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 599,
+    "createdAt": "2025-07-05T02:56:24.864Z",
+    "status": "paid",
+    "updatedAt": "2025-07-05T02:57:39.102Z"
+  },
+  {
+    "id": "ORD-1751684317471",
+    "items": [
+      {
+        "id": 3,
+        "name": "Logitech MK850 Performance Wireless Keyboard and Mouse Combo",
+        "price": 89,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 89,
+    "createdAt": "2025-07-05T02:58:37.471Z",
+    "status": "paid",
+    "updatedAt": "2025-07-05T02:59:08.775Z"
+  }
+]
