@@ -18,9 +18,26 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer components {
   .animate-fade-in {
     @apply opacity-0 translate-y-4;
     animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.1s forwards;
+  }
+
+  /* Updated button styles with new color palette */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary/20;
+  }
+
+  /* Product card styles */
+  .product-card {
+    @apply bg-white rounded-xl border border-border-muted hover:shadow-lg transition-all duration-300 overflow-hidden;
   }
 }
 
@@ -29,18 +46,4 @@ body {
     opacity: 1;
     transform: none;
   }
-}
-
-/* Updated button styles with new color palette */
-.btn-primary {
-  @apply bg-primary hover:bg-primary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/20;
-}
-
-.btn-secondary {
-  @apply bg-secondary hover:bg-secondary/90 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-secondary/20;
-}
-
-/* Product card styles */
-.product-card {
-  @apply bg-white rounded-xl border border-border-muted hover:shadow-lg transition-all duration-300 overflow-hidden;
 }

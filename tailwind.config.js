@@ -13,6 +13,7 @@ module.exports = {
         primary: '#2563eb',
         secondary: '#10b981',
         'border-muted': '#e5e7eb',
+        card: '#ffffff',
       },
       fontFamily: {
         sans: [
@@ -21,6 +22,17 @@ module.exports = {
           'system-ui',
           'sans-serif',
         ],
+      },
+      animation: {
+        'fade-in': 'fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.1s forwards',
+      },
+      keyframes: {
+        fadeInUp: {
+          'to': {
+            opacity: '1',
+            transform: 'none',
+          },
+        },
       },
     },
   },

@@ -1,301 +1,261 @@
 export const products = [
+  // 1. Printer
   {
     id: 1,
-    name: "Herman Miller Aeron Ergonomic Chair",
-    description: "Iconic ergonomic office chair for all-day comfort.",
-    detailedDescription: "The Herman Miller Aeron is the gold standard in ergonomic seating. Featuring 8Z Pellicle mesh for breathability, PostureFit SL back support, and fully adjustable arms, it adapts to your body for all-day comfort. Its graphite frame and base, along with a waterfall front edge, reduce pressure on your legs. Ideal for long hours at the desk.",
-    price: 1595,
-    image: "https://m.media-amazon.com/images/I/71YxVnTRbOL.jpg",
-    stock: 15,
-    category: "Furniture",
-    sku: "AER1B23DWALPG1G1G1BBBK23103",
-    materials: ["8Z Pellicle Mesh", "Graphite Frame", "Recycled Aluminum Base"],
-    dimensions: "41\"H x 27\"W x 16.75\"D",
-    features: [
-      "8Z Pellicle mesh seat and back",
-      "PostureFit SL back support",
-      "Fully adjustable arms",
-      "Tilt limiter and seat angle adjustment",
-      "Eco-friendly design"
-    ],
-    rating: 4.8,
-    reviews: [
-      {
-        reviewer: "Jane D.",
-        rating: 5,
-        date: "2024-03-12",
-        comment: "Absolutely the best chair for long workdays. My back pain is gone!"
-      },
-      {
-        reviewer: "Mike S.",
-        rating: 4.5,
-        date: "2024-02-28",
-        comment: "Expensive, but worth every dollar for the comfort and support."
-      }
-    ]
-  },
-  {
-    id: 2,
-    name: "Fully Jarvis Bamboo Standing Desk",
-    description: "Height-adjustable desk with sustainable bamboo top.",
-    detailedDescription: "The Fully Jarvis Bamboo Standing Desk features a sustainably sourced bamboo top and a sturdy steel frame. With programmable height presets, it transitions smoothly from sitting to standing. The desk is GREENGUARD Gold certified and supports up to 350 lbs, making it perfect for any workspace.",
-    price: 599,
-    image: "https://images.hermanmiller.group/m/c1fc432afbc8aec0/W-FUL_2542428_100401245_bamboo_white_rectangle_a.png?trim=auto&trim-sd=1&blend-mode=darken&blend=fafafa&bg=fafafa&auto=format&w=2500&h=2500&q=60&fit=fill&fill=solid",
-    stock: 8,
-    category: "Furniture",
-    sku: "JBRD-BMB-6072",
-    materials: ["Bamboo Top", "Powder-Coated Steel Frame"],
-    dimensions: "60\"W x 30\"D x 25.5–51.1\"H",
-    features: [
-      "Sustainably sourced bamboo top",
-      "Programmable height presets",
-      "350 lb lifting capacity",
-      "Quiet motor",
-      "GREENGUARD Gold certified"
-    ],
-    rating: 4.7,
-    reviews: [
-      {
-        reviewer: "Alex P.",
-        rating: 5,
-        date: "2024-01-15",
-        comment: "Love the smooth height adjustment and eco-friendly materials."
-      },
-      {
-        reviewer: "Sam R.",
-        rating: 4.5,
-        date: "2024-02-10",
-        comment: "Solid build and easy to assemble. Highly recommend."
-      }
-    ]
-  },
-  {
-    id: 3,
-    name: "Logitech MK850 Performance Wireless Keyboard and Mouse Combo",
-    description: "Wireless keyboard and mouse combo for productivity.",
-    detailedDescription: "The Logitech MK850 Combo offers a full-size keyboard with cushioned palm rest and a contoured mouse for all-day comfort. Connect up to three devices via Bluetooth or USB receiver. The combo features easy-switch buttons, long battery life, and quiet keys for a seamless workflow.",
-    price: 89,
-    image: "https://www.logitech.com/content/dam/logitech/en/products/combos/mk850-keyboard-mouse/gallery/mk850-gallery-1-new.png",
-    stock: 45,
+    name: "HP LaserJet Pro MFP M283fdw",
+    description: "Wireless all-in-one color laser printer for home and small offices.",
+    detailedDescription: "Fast and efficient color laser printer with print, scan, copy, and fax. Supports wireless, duplex printing, and has a 2.7\" color touchscreen.",
+    price: 429.99,
+    image: "/images/hp-laserjet-m283fdw.jpg",
+    stock: 12,
     category: "Electronics",
-    sku: "920-008219",
-    materials: ["ABS Plastic", "Rubber Palm Rest"],
-    dimensions: "Keyboard: 17.0\" x 8.3\" x 1.1\"; Mouse: 4.9\" x 3.0\" x 2.0\"",
+    sku: "HP-LJM283FDW-001",
+    materials: ["Plastic", "Metal", "Electronic components"],
+    dimensions: "16.5\" x 16.6\" x 13.2\"",
     features: [
-      "Multi-device connectivity",
-      "Cushioned palm rest",
-      "Contoured mouse",
-      "Long battery life",
-      "Quiet keys"
+      "All-in-one functionality",
+      "22 ppm print speed",
+      "Automatic two-sided printing",
+      "Wireless and mobile printing",
+      "2.7\" color touchscreen"
     ],
     rating: 4.6,
     reviews: [
       {
-        reviewer: "Linda W.",
-        rating: 4.5,
-        date: "2024-03-01",
-        comment: "Great for switching between my laptop and tablet. Comfortable and reliable."
-      },
-      {
-        reviewer: "Chris T.",
-        rating: 4.7,
-        date: "2024-02-20",
-        comment: "Keys are quiet and the mouse fits perfectly in my hand."
-      }
-    ]
-  },
-  {
-    id: 4,
-    name: "Fujitsu ScanSnap iX1600",
-    description: "Fast desktop scanner with touchscreen and Wi-Fi.",
-    detailedDescription: "The ScanSnap iX1600 is a high-speed document scanner with a 4.3-inch touchscreen and Wi-Fi connectivity. It scans up to 40 pages per minute, supports multiple users, and offers one-touch shortcuts for workflows. Ideal for home offices and small businesses.",
-    price: 429,
-    image: "https://www.pfu-ca.ricoh.com/-/media/project/scanners-pci/products/scansnap-ix1600/r_ix1600_front.jpg",
-    stock: 12,
-    category: "Electronics",
-    sku: "PA03770-B635",
-    materials: ["Plastic", "Electronic Components"],
-    dimensions: "11.5\" x 6.0\" x 6.3\"",
-    features: [
-      "4.3-inch touchscreen",
-      "Wi-Fi and USB connectivity",
-      "40 ppm scan speed",
-      "One-touch shortcuts",
-      "Multi-user support"
-    ],
-    rating: 4.7,
-    reviews: [
-      {
-        reviewer: "Patricia H.",
+        reviewer: "Alex Thompson",
         rating: 5,
-        date: "2024-03-05",
-        comment: "Super fast and easy to use. The touchscreen is a game changer."
-      },
-      {
-        reviewer: "George K.",
-        rating: 4.5,
-        date: "2024-02-18",
-        comment: "Perfect for my home office. Scans are crisp and clear."
+        date: "2024-05-10",
+        comment: "Reliable and easy to use. Great quality prints."
       }
     ]
   },
+
+  // 2. Keyboard
   {
-    id: 5,
-    name: "Dacasso Classic Black Leather 5-Piece Desk Set",
-    description: "Luxury leather desk set for executive workspaces.",
-    detailedDescription: "This Dacasso 5-piece set includes a desk pad, letter tray, pencil cup, memo holder, and business card holder, all crafted from top-grain leather. The set adds a touch of sophistication and organization to any executive desk.",
-    price: 459,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGJr7wddHd5RtWVEARVHV6b9qTuBm72ye89A&s",
-    stock: 67,
-    category: "Accessories",
-    sku: "A1001",
-    materials: ["Top-Grain Leather", "Felt Bottoms", "Wood Core"],
-    dimensions: "Desk pad: 34\" x 20\"",
+    id: 2,
+    name: "Logitech MX Keys",
+    description: "Premium wireless keyboard with smart illumination.",
+    detailedDescription: "Logitech MX Keys offers a fluid, quiet typing experience with backlit keys and multi-device pairing. Ideal for productivity and comfort.",
+    price: 119.99,
+    image: "/images/logitech-mx-keys.png",
+    stock: 30,
+    category: "Electronics",
+    sku: "LOGI-MXKEYS-002",
+    materials: ["Plastic", "Aluminum"],
+    dimensions: "17.0\" x 5.1\" x 0.8\"",
     features: [
-      "Top-grain leather construction",
-      "5-piece set",
-      "Elegant and durable",
-      "Protective felt bottoms",
-      "Perfect for executive desks"
+      "Backlit keys",
+      "USB-C rechargeable",
+      "Multi-device support",
+      "Ergonomic layout",
+      "Bluetooth and Unifying receiver"
     ],
     rating: 4.8,
     reviews: [
       {
-        reviewer: "Rachel M.",
+        reviewer: "Jamie Lee",
         rating: 5,
-        date: "2024-03-10",
-        comment: "Beautiful set, very high quality. My desk looks amazing!"
-      },
-      {
-        reviewer: "Tom B.",
-        rating: 4.6,
-        date: "2024-02-22",
-        comment: "Great value for a luxury set."
+        date: "2024-04-02",
+        comment: "Perfect keyboard for work. Super smooth and quiet."
       }
     ]
   },
+
+  // 3. Mouse
   {
-    id: 6,
-    name: "BenQ e-Reading LED Desk Lamp",
-    description: "Wide, adjustable LED desk lamp for eye comfort.",
-    detailedDescription: "The BenQ e-Reading Lamp features a wide curved LED panel for even illumination, touch controls, and adjustable color temperature. Its flexible swing arm and auto-dimming mode make it ideal for reading, working, or crafting.",
-    price: 229,
-    image: "https://m.media-amazon.com/images/I/31XIQIt9sJL._UF894,1000_QL80_.jpg",
-    stock: 34,
-    category: "Lighting",
-    sku: "AR16_D",
-    materials: ["Aluminum Alloy", "Polycarbonate", "LED"],
-    dimensions: "23.2\" x 8.7\" x 24.6\"",
+    id: 3,
+    name: "Logitech MX Master 3S",
+    description: "Ergonomic wireless mouse for high precision work.",
+    detailedDescription: "With ultra-fast scrolling, customizable buttons, and advanced tracking, the MX Master 3S is built for designers and developers.",
+    price: 99.99,
+    image: "/images/logitech-mx-master-3s.png",
+    stock: 18,
+    category: "Electronics",
+    sku: "LOGI-MXM3S-003",
+    materials: ["Plastic", "Rubber", "Metal"],
+    dimensions: "4.9\" x 3.3\" x 2.0\"",
     features: [
-      "Wide curved LED panel",
-      "Adjustable color temperature",
-      "Auto-dimming mode",
-      "Touch controls",
-      "Flexible swing arm"
+      "MagSpeed scroll wheel",
+      "8K DPI sensor",
+      "Silent clicks",
+      "USB-C rechargeable",
+      "Multi-device & OS compatibility"
     ],
     rating: 4.7,
     reviews: [
       {
-        reviewer: "Sophie L.",
-        rating: 4.8,
-        date: "2024-03-08",
-        comment: "Covers my whole desk with soft light. Love the design!"
-      },
-      {
-        reviewer: "Kevin J.",
-        rating: 4.6,
-        date: "2024-02-25",
-        comment: "Easy to adjust and very sturdy."
+        reviewer: "Chris Nolan",
+        rating: 5,
+        date: "2024-06-15",
+        comment: "Most comfortable mouse I've used. Great for long sessions."
       }
     ]
   },
+
+  // 4. Desk Lamp
   {
-    id: 7,
-    name: "Lorell 2-Drawer Mobile File Cabinet",
-    description: "Steel file cabinet with two drawers and casters.",
-    detailedDescription: "The Lorell 2-Drawer Mobile File Cabinet is made of durable steel and features two smooth-glide drawers for letter-size files. Its compact design and four casters make it easy to move and fit under most desks.",
-    price: 83,
-    image: "https://m.media-amazon.com/images/I/61l+p4W7JfL._UF894,1000_QL80_.jpg",
-    stock: 23,
-    category: "Storage",
-    sku: "LLR16872",
-    materials: ["Steel", "Plastic Casters"],
-    dimensions: "24\"H x 14.3\"W x 18\"D",
+    id: 4,
+    name: "BenQ e-Reading LED Desk Lamp",
+    description: "Wide LED desk lamp with auto-dimming and adjustable arms.",
+    detailedDescription: "Designed for screen users, this lamp reduces glare, covers wide desks, and automatically adjusts brightness for eye comfort.",
+    price: 179.99,
+    image: "/images/benq-desk-lamp.jpg",
+    stock: 20,
+    category: "Home & Office",
+    sku: "BENQ-LAMP-004",
+    materials: ["Aluminum", "Plastic", "LED"],
+    dimensions: "23.2\" x 9.4\" x 21.4\"",
     features: [
-      "Durable steel construction",
-      "Two smooth-glide drawers",
-      "Four casters for mobility",
-      "Fits under most desks",
-      "Lockable drawers"
+      "Auto-dimming technology",
+      "Adjustable brightness and color temperature",
+      "Wide lighting coverage",
+      "Flicker-free lighting",
+      "USB-powered"
     ],
     rating: 4.5,
     reviews: [
       {
-        reviewer: "Derek F.",
-        rating: 4.5,
-        date: "2024-03-03",
-        comment: "Solid and easy to move. Fits perfectly under my desk."
-      },
-      {
-        reviewer: "Emily Z.",
-        rating: 4.4,
-        date: "2024-02-19",
-        comment: "Good value and sturdy build."
+        reviewer: "Maya Singh",
+        rating: 5,
+        date: "2024-02-28",
+        comment: "Excellent for studying. Bright and customizable."
       }
     ]
   },
+
+  // 5. Desk
   {
-    id: 8,
-    name: "Quartet Magnetic Whiteboard, 36 x 24",
-    description: "Magnetic whiteboard with aluminum frame for office or home.",
-    detailedDescription: "This Quartet whiteboard features a smooth magnetic surface for easy writing and erasing. The aluminum frame is lightweight yet sturdy, and the board comes with mounting hardware and a marker tray. Ideal for offices, classrooms, or home use.",
-    price: 62,
-    image: "https://midoco.ca/cdn/shop/products/l1545_grande.jpg?v=1622292383",
-    stock: 18,
-    category: "Office Supplies",
-    sku: "QRT2545",
-    materials: ["Magnetic Steel Surface", "Aluminum Frame", "Plastic Tray"],
-    dimensions: "36\"W x 24\"H",
+    id: 5,
+    name: "FlexiSpot Adjustable Standing Desk",
+    description: "Electric height-adjustable desk for ergonomic workspace.",
+    detailedDescription: "Spacious and sturdy electric desk with memory presets. Switch from sitting to standing with the push of a button.",
+    price: 329.99,
+    image: "/images/flexispot-desk.jpg",
+    stock: 10,
+    category: "Furniture",
+    sku: "FLEXI-DESK-005",
+    materials: ["Steel", "Wood"],
+    dimensions: "55\" x 28\" x 28\"–48\" (adjustable)",
     features: [
-      "Smooth magnetic surface",
-      "Lightweight aluminum frame",
-      "Includes mounting hardware",
-      "Marker tray included",
-      "Easy to erase"
+      "Electric height adjustment",
+      "Dual motor system",
+      "4 memory presets",
+      "Cable management tray",
+      "Quiet operation"
     ],
     rating: 4.4,
     reviews: [
       {
-        reviewer: "Nina G.",
-        rating: 4.5,
-        date: "2024-03-06",
-        comment: "Great size and easy to mount. Wipes clean every time."
-      },
+        reviewer: "Omar Patel",
+        rating: 4,
+        date: "2024-03-17",
+        comment: "Solid build, works great. Would love a wider tabletop option."
+      }
+    ]
+  },
+
+  // 6. Office Chair
+  {
+    id: 6,
+    name: "Herman Miller Aeron Chair",
+    description: "High-performance ergonomic office chair.",
+    detailedDescription: "A modern icon, the Aeron Chair provides unmatched support, breathability, and comfort with adjustable settings for long work sessions.",
+    price: 1395.00,
+    image: "/images/aeron-chair.jpeg",
+    stock: 7,
+    category: "Furniture",
+    sku: "HM-AERON-006",
+    materials: ["Recycled materials", "Mesh", "Aluminum"],
+    dimensions: "27\" x 27\" x 41\"",
+    features: [
+      "PostureFit SL support",
+      "Adjustable armrests",
+      "Breathable mesh seat and back",
+      "Tilt limiter and forward tilt",
+      "Eco-conscious design"
+    ],
+    rating: 4.9,
+    reviews: [
       {
-        reviewer: "Oscar V.",
-        rating: 4.3,
-        date: "2024-02-21",
-        comment: "Good value for the price."
+        reviewer: "David Kim",
+        rating: 5,
+        date: "2024-01-09",
+        comment: "Expensive but worth every penny. My back thanks me."
+      }
+    ]
+  },
+
+  // 7. Laptop
+  {
+    id: 7,
+    name: "Dell XPS 13 Plus (2024)",
+    description: "Sleek ultrabook with powerful performance.",
+    detailedDescription: "The Dell XPS 13 Plus features a near-borderless display, Intel Core Ultra processor, and a seamless glass touchpad for a futuristic feel.",
+    price: 1699.99,
+    image: "/images/dell-xps-13-plus.jpg",
+    stock: 15,
+    category: "Electronics",
+    sku: "DELL-XPS13-007",
+    materials: ["Aluminum", "Glass", "Carbon fiber"],
+    dimensions: "11.6\" x 7.8\" x 0.6\"",
+    features: [
+      "13.4\" 3.5K OLED display",
+      "Intel Core Ultra 7 CPU",
+      "16GB RAM, 1TB SSD",
+      "Fingerprint reader",
+      "Windows 11 Pro"
+    ],
+    rating: 4.8,
+    reviews: [
+      {
+        reviewer: "Lina Ahmed",
+        rating: 5,
+        date: "2024-04-05",
+        comment: "Blazing fast and looks amazing. Great for travel and work."
       }
     ]
   }
 ];
 
+// Categories for filtering
 export const categories = [
   "All",
-  "Furniture",
-  "Electronics", 
-  "Accessories",
-  "Lighting",
-  "Storage",
-  "Office Supplies"
+  "Electronics",
+  "Furniture", 
+  "Home & Office"
 ];
 
+// Helper function to get product by ID
+export const getProductById = (id) => {
+  return products.find(product => product.id === parseInt(id));
+};
+
+// Helper function to get products by category
 export const getProductsByCategory = (category) => {
   if (category === "All") return products;
   return products.filter(product => product.category === category);
 };
 
-export const getProductById = (id) => {
-  return products.find(product => product.id === parseInt(id));
+// Helper function to search products
+export const searchProducts = (query) => {
+  const lowercaseQuery = query.toLowerCase();
+  return products.filter(product => 
+    product.name.toLowerCase().includes(lowercaseQuery) ||
+    product.description.toLowerCase().includes(lowercaseQuery) ||
+    product.category.toLowerCase().includes(lowercaseQuery)
+  );
+};
+
+// Helper function to get featured products (top rated)
+export const getFeaturedProducts = (limit = 4) => {
+  return products
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, limit);
+};
+
+// Helper function to get products by price range
+export const getProductsByPriceRange = (minPrice, maxPrice) => {
+  return products.filter(product => 
+    product.price >= minPrice && product.price <= maxPrice
+  );
 }; 

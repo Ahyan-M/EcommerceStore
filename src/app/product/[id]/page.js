@@ -12,6 +12,7 @@ export default function ProductDetailPage() {
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [imageError, setImageError] = useState(false);
   const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
@@ -25,6 +26,10 @@ export default function ProductDetailPage() {
   const handleAddToCart = () => {
     addToCart({ ...product, quantity });
     // Optionally, show a non-intrusive message here
+  };
+
+  const handleImageError = () => {
+    setImageError(true);
   };
 
   if (loading) {
@@ -83,13 +88,24 @@ export default function ProductDetailPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
               {/* Product Image */}
               <div className="relative h-96 bg-background rounded-xl overflow-hidden flex items-center justify-center">
+                {!imageError ? (
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
                   className="object-contain"
-                  onError={(e) => { e.target.style.display = 'none'; }}
-                />
+                    onError={handleImageError}
+                  />
+                ) : (
+                  <div className="flex items-center justify-center w-full h-full text-text/40">
+                    <div className="text-center">
+                      <svg className="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                      <p className="text-lg">Image unavailable</p>
+                    </div>
+                  </div>
+                )}
                 <div className="absolute top-4 right-4">
                   <span className="bg-secondary text-white text-sm px-3 py-1 rounded-full">
                     {product.stock} in stock
@@ -221,8 +237,19 @@ export default function ProductDetailPage() {
                         alt={relatedProduct.name}
                         fill
                         className="object-contain"
-                        onError={(e) => { e.target.style.display = 'none'; }}
+                        onError={(e) => { 
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
                       />
+                      <div className="hidden items-center justify-center w-full h-full text-text/40">
+                        <div className="text-center">
+                          <svg className="w-8 h-8 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          <p className="text-xs">No image</p>
+                        </div>
+                      </div>
                     </div>
                     <h3 className="font-semibold text-text mb-1 font-sans">{relatedProduct.name}</h3>
                     <p className="text-primary font-bold">${relatedProduct.price}</p>

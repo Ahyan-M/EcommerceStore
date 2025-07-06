@@ -139,5 +139,142 @@
     "createdAt": "2025-07-05T02:58:37.471Z",
     "status": "paid",
     "updatedAt": "2025-07-05T02:59:08.775Z"
+  },
+  {
+    "id": "ORD-1751823879859-0cig6kfje",
+    "items": [
+      {
+        "id": 2,
+        "name": "Logitech MX Keys",
+        "price": 119.99,
+        "quantity": 1
+      },
+      {
+        "id": 6,
+        "name": "Herman Miller Aeron Chair",
+        "price": 1395,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 1514.99,
+    "createdAt": "2025-07-06T17:44:39.859Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751823895637-8296rww34",
+    "items": [
+      {
+        "id": 2,
+        "name": "Logitech MX Keys",
+        "price": 119.99,
+        "quantity": 1
+      },
+      {
+        "id": 6,
+        "name": "Herman Miller Aeron Chair",
+        "price": 1395,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 1514.99,
+    "createdAt": "2025-07-06T17:44:55.637Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751824510268-ryqu9qrl6",
+    "items": [
+      {
+        "id": 2,
+        "name": "Logitech MX Keys",
+        "price": 119.99,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 119.99,
+    "createdAt": "2025-07-06T17:55:10.268Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751824553818-gy3sp2itk",
+    "items": [
+      {
+        "id": 2,
+        "name": "Logitech MX Keys",
+        "price": 119.99,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 119.99,
+    "createdAt": "2025-07-06T17:55:53.818Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751824682064-syljaeadi",
+    "items": [
+      {
+        "id": 2,
+        "name": "Logitech MX Keys",
+        "price": 119.99,
+        "quantity": 2
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 239.98,
+    "createdAt": "2025-07-06T17:58:02.064Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751825192710-jriku30ti",
+    "items": [
+      {
+        "id": 2,
+        "name": "Logitech MX Keys",
+        "price": 119.99,
+        "quantity": 3
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 359.96999999999997,
+    "createdAt": "2025-07-06T18:06:32.710Z",
+    "status": "pending"
+  },
+  {
+    "id": "ORD-1751825407515-d2lptvf3m",
+    "items": [
+      {
+        "id": 2,
+        "name": "Logitech MX Keys",
+        "price": 119.99,
+        "quantity": 3
+      },
+      {
+        "id": 1,
+        "name": "HP LaserJet Pro MFP M283fdw",
+        "price": 429.99,
+        "quantity": 1
+      }
+    ],
+    "customerInfo": {
+      "email": "customer@example.com"
+    },
+    "total": 789.96,
+    "createdAt": "2025-07-06T18:10:07.515Z",
+    "status": "pending"
   }
 ]

@@ -61,7 +61,7 @@ export default async function handler(req, res) {
 
     // Calculate total
     const total = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    
+
     if (total <= 0) {
       console.error('Invalid total amount:', total);
       return res.status(400).json({ message: 'Invalid total amount' });
@@ -73,17 +73,17 @@ export default async function handler(req, res) {
     let order;
     try {
       order = createOrder({
-        items: items.map(item => ({
-          id: item.id,
-          name: item.name,
-          price: item.price,
-          quantity: item.quantity,
-        })),
-        customerInfo: {
-          email: 'customer@example.com', // This would come from the form
-        },
-        total: total,
-      });
+      items: items.map(item => ({
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        quantity: item.quantity,
+      })),
+      customerInfo: {
+        email: 'customer@example.com', // This would come from the form
+      },
+      total: total,
+    });
     } catch (orderError) {
       console.error('Failed to create order:', orderError);
       return res.status(500).json({ message: 'Failed to create order' });
