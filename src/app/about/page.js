@@ -6,10 +6,10 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - Different from homepage */}
-      <section className="bg-gradient-to-br from-primary/5 to-secondary/5 py-20">
+      <section className="bg-gradient-to-br from-primary/5 to-secondary/5 min-h-[320px] flex items-center justify-center py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-text font-sans">About AM Supply</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-text font-sans break-words">About AM Supply</h1>
             <p className="text-xl text-text/70 font-sans max-w-2xl mx-auto">
               Your trusted partner for premium office supplies and equipment since 2024
             </p>
@@ -145,11 +145,11 @@ export default function AboutPage() {
           </section>
 
           {/* CTA - Different style */}
-          <section className="text-center">
-            <div className="bg-gradient-to-r from-primary to-primary/90 rounded-2xl p-12 text-white">
-              <h2 className="text-3xl font-bold mb-4 font-sans">Ready to Transform Your Workspace?</h2>
-              <p className="text-xl mb-8 opacity-90 font-sans">Discover our premium selection of office supplies and equipment.</p>
-              <Link href="/" className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-block">
+          <section className="text-center mb-12">
+            <div className="bg-white max-w-2xl mx-auto rounded-2xl p-6 text-black shadow-xl border border-border-muted flex flex-col items-center">
+              <h2 className="text-3xl font-bold mb-2 font-sans">Ready to Transform Your Workspace?</h2>
+              <p className="text-lg mb-6 font-sans opacity-90">Discover our premium selection of office supplies and equipment.</p>
+              <Link href="/" className="btn-primary text-lg px-8 py-3 rounded-lg font-semibold shadow hover:scale-105 transition-transform duration-200">
                 Shop Now
               </Link>
             </div>
