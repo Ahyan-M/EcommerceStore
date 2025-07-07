@@ -1,7 +1,8 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { CartContext } from '../../components/CartContext';
 
 export default function SuccessClient() {
   const searchParams = useSearchParams();
@@ -9,6 +10,7 @@ export default function SuccessClient() {
   const orderId = searchParams.get('order_id');
   const [orderDetails, setOrderDetails] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { clearCart } = useContext(CartContext);
 
   useEffect(() => {
     async function fetchOrderDetails() {
@@ -18,6 +20,8 @@ export default function SuccessClient() {
           if (response.ok) {
             const order = await response.json();
             setOrderDetails(order);
+            // Clear the cart after successful payment
+            clearCart();
           }
         } catch (error) {
           // handle error
@@ -26,7 +30,7 @@ export default function SuccessClient() {
       setLoading(false);
     }
     fetchOrderDetails();
-  }, [orderId]);
+  }, [orderId, clearCart]);
 
   if (loading) {
     return (

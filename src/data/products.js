@@ -112,7 +112,7 @@ export const products = [
       "Flicker-free lighting",
       "USB-powered"
     ],
-    rating: 4.5,
+    rating: 5,
     reviews: [
       {
         reviewer: "Maya Singh",

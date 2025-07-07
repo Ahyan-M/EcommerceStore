@@ -181,7 +181,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-text mb-2 font-sans">Email Us</h3>
-                      <p className="text-text/70 font-sans">General: info@amsupply.com<br />Support: support@amsupply.com</p>
+                      <p className="text-text/70 font-sans">General: amsupplyservices@gmail.com<br /></p>
                     </div>
                   </div>
                 </div>

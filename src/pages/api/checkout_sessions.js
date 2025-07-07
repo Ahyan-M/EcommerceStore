@@ -57,6 +57,7 @@ export default async function handler(req, res) {
         console.error('Invalid price or quantity:', item);
         return res.status(400).json({ message: 'Invalid price or quantity' });
       }
+      // Image is optional, so we don't validate it
     }
 
     // Calculate total
@@ -98,6 +99,7 @@ export default async function handler(req, res) {
         product_data: {
           name: item.name,
           description: `Quantity: ${item.quantity}`,
+          images: item.image ? [`${req.headers.origin}${item.image}`] : [], // Add image URLs
         },
         unit_amount: Math.round(item.price * 100), // Convert to cents
       },

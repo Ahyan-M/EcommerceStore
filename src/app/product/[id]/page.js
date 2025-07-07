@@ -5,7 +5,6 @@ import { useParams } from 'next/navigation';
 import { getProductById, products } from '../../../data/products';
 import Link from 'next/link';
 import { CartContext } from '../../../components/CartContext';
-import Image from 'next/image';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -20,6 +19,7 @@ export default function ProductDetailPage() {
       const foundProduct = getProductById(params.id);
       setProduct(foundProduct);
       setLoading(false);
+      setImageError(false); // Reset image error state when product changes
     }
   }, [params.id]);
 
@@ -89,13 +89,13 @@ export default function ProductDetailPage() {
               {/* Product Image */}
               <div className="relative h-96 bg-background rounded-xl overflow-hidden flex items-center justify-center">
                 {!imageError ? (
-                <Image
-                  src={product.image}
+                <img
+                  key={product.id}
+                  src={`${product.image}?v=${product.id}`}
                   alt={product.name}
-                  fill
-                  className="object-contain"
-                    onError={handleImageError}
-                  />
+                  className="object-contain w-full h-full"
+                  onError={handleImageError}
+                />
                 ) : (
                   <div className="flex items-center justify-center w-full h-full text-text/40">
                     <div className="text-center">
@@ -232,11 +232,11 @@ export default function ProductDetailPage() {
                 {relatedProducts.map((relatedProduct) => (
                   <div key={relatedProduct.id} className="bg-white rounded-xl border border-border-muted p-4 hover:shadow-md transition-shadow">
                     <div className="h-32 bg-background rounded-lg mb-3 flex items-center justify-center">
-                      <Image
-                        src={relatedProduct.image}
+                      <img
+                        key={relatedProduct.id}
+                        src={`${relatedProduct.image}?v=${relatedProduct.id}`}
                         alt={relatedProduct.name}
-                        fill
-                        className="object-contain"
+                        className="object-contain w-full h-full"
                         onError={(e) => { 
                           e.target.style.display = 'none';
                           e.target.nextSibling.style.display = 'flex';
