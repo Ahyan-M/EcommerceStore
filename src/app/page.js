@@ -117,7 +117,7 @@ export default function Home() {
               Why Choose AM Supply?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We're committed to providing the best office supplies and customer experience
+              We&apos;re committed to providing the best office supplies and customer experience
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
